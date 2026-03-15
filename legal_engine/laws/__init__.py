@@ -1,0 +1,3 @@
+"""
+Laws sub-package initialiser.
+"""
