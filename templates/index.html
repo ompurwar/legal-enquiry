@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Advisory Bot – Indian Law Advisor</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+
+  <!-- ===== App Shell ===== -->
+  <div class="app-container">
+
+    <!-- Sidebar: Law Reference Panel -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-logo">⚖️</span>
+        <h2>Legal References</h2>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">✕</button>
+      </div>
+
+      <div class="sidebar-body" id="legalRefs">
+        <p class="sidebar-placeholder">Ask a legal question to see applicable Indian laws here.</p>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+
+      <!-- Top Bar -->
+      <header class="chat-header">
+        <button class="menu-btn" id="menuBtn" aria-label="Open legal references">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="chat-header-info">
+          <div class="avatar">⚖️</div>
+          <div>
+            <div class="chat-title">Kanoon Mitra</div>
+            <div class="chat-subtitle">Indian Legal Advisor · BNS · BNSS · BSA · Personal Laws</div>
+          </div>
+        </div>
+        <div class="header-badge">AI Powered</div>
+      </header>
+
+      <!-- Messages -->
+      <div class="messages-container" id="messagesContainer">
+        <!-- Welcome message -->
+        <div class="message message--bot">
+          <div class="message-bubble">
+            <p>🙏 <strong>Namaste! Welcome to Kanoon Mitra – Your Indian Legal Advisor.</strong></p>
+            <p>Main aapki kisi bhi Indian law se related query mein madad kar sakta hoon, jaise:</p>
+            <ul>
+              <li>🔴 Criminal law – BNS (formerly IPC), BNSS (formerly CrPC)</li>
+              <li>💍 Family &amp; Personal Law – Hindu Marriage Act, Muslim Personal Law, Special Marriage Act</li>
+              <li>🏠 Domestic Violence, Dowry, Maintenance / Alimony</li>
+              <li>📋 Evidence – Bharatiya Sakshya Adhiniyam (BSA)</li>
+              <li>⚖️ Landmark Supreme Court cases (Shah Bano, Shayara Bano, Vishaka…)</li>
+            </ul>
+            <p>Please note: This is for general legal information only. Always consult a qualified advocate for your specific case.</p>
+            <div class="message-meta">
+              <span class="message-time" data-time="now"></span>
+              <span class="ticks ticks--read" title="Read">✓✓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="input-bar">
+        <textarea
+          id="userInput"
+          class="input-field"
+          placeholder="Apna legal sawaal poochhen… (Ask your legal question in English or Hindi)"
+          rows="1"
+          aria-label="Type your legal question"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Legal Refs Overlay for mobile -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
